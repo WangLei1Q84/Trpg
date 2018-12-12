@@ -23,18 +23,15 @@ public class webSecurityConfig extends WebSecurityConfigurerAdapter {
 		return new customUserService();
 	}
 	
-	@Override
-	protected void configure(AuthenticationManagerBuilder builder) throws Exception{
-		builder.userDetailsService(customUserService()).passwordEncoder(new BCryptPasswordEncoder());
-	}
+	//@Override
+	//protected void configure(AuthenticationManagerBuilder builder) throws Exception{
+		//builder.userDetailsService(customUserService()).passwordEncoder(new BCryptPasswordEncoder());
+	//}
 	
 	@Override
 	protected void configure(HttpSecurity httpSecurity) throws Exception{
 		httpSecurity.authorizeRequests()
-		.antMatchers("/registry").anonymous()
-		.antMatchers("/regin").anonymous()
-		.antMatchers("/unv").anonymous()
-		.antMatchers("/tosearch","/search").anonymous()
+		.antMatchers("/room").anonymous()
 		.anyRequest().authenticated()
 		.and().formLogin().loginPage("/login").failureUrl("/login?error").permitAll()
 		.and()
