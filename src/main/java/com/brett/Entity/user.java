@@ -106,4 +106,14 @@ public class user implements UserDetails{
 		// TODO Auto-generated method stub
 		return true;
 	}
+
+	public void setNickname(String string) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	public void setAvatar(String string) {
+		// TODO Auto-generated method stub
+		
+	}
 }
