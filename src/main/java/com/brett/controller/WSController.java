@@ -8,7 +8,7 @@ import org.springframework.messaging.simp.SimpMessagingTemplate;
 import org.springframework.stereotype.Controller;
 
 @Controller
-public class WSConroller {
+public class WSController {
 
 	@Autowired
 	private SimpMessagingTemplate messagingTemplate;
@@ -17,8 +17,6 @@ public class WSConroller {
 	public void handleChat(Principal principal, String msg) { 
 		if (principal.getName().equals("sang")) { 
 			messagingTemplate.convertAndSendToUser("lenve", "/queue/notifications", principal.getName() + "给您发来了消息：" + msg); 
-		}else{ 
-			messagingTemplate.convertAndSendToUser("sang", "/queue/notifications", principal.getName() + "给您发来了消息：" + msg); 
 		} 
 	}
 	

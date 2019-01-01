@@ -1,0 +1,44 @@
+div{
+    display: inline-block
+}
+#smallmap{
+    position:absolute;
+    width: 20%;
+    height: 20%;    
+}
+#roledetail{
+    position:absolute;
+    width: 20%;
+    height: 58%;
+}
+#record{
+    position:absolute;
+    width: 20%;
+    height: 80%;
+    right: 0;
+}
+#rolepic{
+    position:absolute;
+    width: 20%;
+    height: 20%;
+}
+#msgsend{
+    position:absolute;
+    width: 60%;
+    height: 20%;
+}
+#msgsend button{
+    position: absolute;
+    float: right;
+    right:5px;
+    bottom: 5px;
+}
+#note{
+    position:absolute;
+    width: 20%;    
+    height: 20%;
+}
+.main{
+    width: 58%;
+    height: 80%;
+}

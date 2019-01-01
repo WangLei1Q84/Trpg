@@ -3,16 +3,50 @@
 <head>
 <meta charset="UTF-8">
 <title>Insert title here</title>
-<link rel="stylesheet" href="../static/css/bootstrap.min.css" />
-<script type="text/javascript" src="../static/js/jquery-3.3.1.min.js"></script>
-<script type="text/javascript" src="../static/js/bootstrap.min.js"></script>
+<link rel="stylesheet" th:href="@{/css/bootstrap.min.css}"/>
+<link rel="stylesheet" th:href="@{/css/main.css}"/>
+<script type="text/javascript" th:src="@{/js/bootstrap.min.js}"></script>
+<script type="text/javascript" th:src="@{/js/jquery-3.3.1.min.js}"></script>
 </head>
 <body>
 <div th:include="@{/common/header} :: companyInfo" th:with="projectName=百度"></div>
 
-<section>
-<section>
+<section class="panel">
+<section class="panel-body">
+    <div id="smallmap">
+        <img src="" />
+    </div>
+    <div id="roledetail" class="panel">
+        <div class="panel-head">
+            <h4>角色资料卡</h4>
+        </div>
+        <div class="panel-body"></div>
+    </div>
+    <div class="main panel">
 
+        <div class="row bottom-left">
+             <button type="button" class="btn-block btn-info" onclick="">图片</button>
+             <button type="button" class="btn-block btn-default" onclick="">音频</button>
+        </div>        
+    </div>
+    <div id="record">
+        <!-- Nav tabs -->
+  <ul class="nav nav-tabs" role="tablist">
+        <li role="presentation" class="active"><a href="#rmodel" aria-controls="rmodel" role="tab" data-toggle="tab">模板</a></li>
+      </ul>    
+      <!-- Tab panes -->
+      <div class="tab-content">
+        <div role="tabpanel" class="tab-pane active" id="rmodel">...</div>
+      </div>
+    </div>
+    <div id="rolepic"><img src=""/></div>
+    <div id="msgsend">
+        <input type="text">
+        <button type="button" onclick=""></button>
+    </div>
+    <div id="note">
+        <ul></ul>
+    </div>
 </section>
 </section>
 
